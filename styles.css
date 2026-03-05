@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -66,9 +67,13 @@ li svg {
 
 /*-----Header-----*/
 .header {
+    background-color: white;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-row-gap: 10px;
+    position: relative;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .header input {
@@ -158,11 +163,136 @@ li svg {
 
 /*-----Content-----*/
 .content {
-    background-color: lightgrey;
+    background-color: rgba(227, 232, 239);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 30px;
+    padding: 20px;
+    align-items: start;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-rows: 20px 1fr 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.project {
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgba(231, 183, 74) 0%, rgba(231, 183, 74) 2%, white 2%, white 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    align-items: center;
+}
+
+.project h4 {
+    margin-left: 25px;
+    align-self: end;
+}
+
+.project p {
+    grid-row: 2;
+    grid-column: 1 / 3;
+    align-self: start;
+    margin-left: 25px;
+}
+
+.project .icons {
+    grid-row: 3;
+    grid-column: 2 / 3;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.first {
+    grid-column: 1;
+}
+
+.right-items {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+}
+
+.announcements-container {
+    display: grid;
+    grid-template-rows: 20px 1fr;
+    row-gap: 20px;
+}
+
+.announcements {
+    background-color: white;
+    height: 350px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.announcements h4 {
+    margin-left: 25px;
+    align-self: end;
+}
+
+.announcements p {
+    margin-left: 25px;
+}
+
+.announcements hr {
+    width: 475px;
+    height: 1px;
+    border: none;
+    background-color: black;
+}
+
+.trending-container {
+    display: grid;
+    grid-template-rows: 20px 1fr;
+    row-gap: 20px;
+}
+
+.trending {
+    background-color: white;
+    height: 225px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.trending .profile-pics {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-left: 25px;
+    align-items: center;
+}
+
+.trending .names {
+    display: grid;
+    align-items: center;
+}
+
+.trending img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+}
+
+.icons svg {
+    height: 20px;
+    width: 20px;
 }
 
 /*-----remove default styling*/
-h1, p {
+h1, h2, p, h3, h4 {
     padding: 0;
     margin: 0;
 }
